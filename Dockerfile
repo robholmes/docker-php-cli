@@ -14,6 +14,6 @@ RUN apt-get update && \
                           php5-json \
                           php5-mcrypt
 
-ADD php-fpm.ini /etc/php5/cli/conf.d/
+ADD php-cli.ini /etc/php5/cli/conf.d/
 
 RUN usermod -u 1000 www-data
