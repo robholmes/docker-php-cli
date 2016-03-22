@@ -8,7 +8,7 @@ RUN apt-get update && \
     LC_ALL=en_US.UTF-8 add-apt-repository -y ppa:ondrej/php5-5.6 && \
     apt-get update && \
     DEBIAN_FRONTEND=noninteractive \
-                          php5-cli \
+    apt-get install -q -y php5-cli \
                           php5-curl \
                           php5-intl \
                           php5-json \
