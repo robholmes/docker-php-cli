@@ -14,6 +14,7 @@ RUN apt-get update && \
                           php5-json \
                           php5-mcrypt && \
     apt-get install -q -y software-properties-common language-pack-en-base && \
+    apt-get autoremove -q -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
