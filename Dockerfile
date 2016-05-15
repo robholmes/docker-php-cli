@@ -12,7 +12,10 @@ RUN apt-get update && \
                           php5-curl \
                           php5-intl \
                           php5-json \
-                          php5-mcrypt
+                          php5-mcrypt && \
+    apt-get install -q -y software-properties-common language-pack-en-base && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD php-cli.ini /etc/php5/cli/conf.d/
 
